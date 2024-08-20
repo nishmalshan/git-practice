@@ -10,12 +10,12 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   // Define the path to the HTML file
   const filePath = path.join(__dirname, '/index.html');
-
+        
   // Read the HTML file
   fs.readFile(filePath, (err, data) => {
     if (err) {
       // If there's an error, send a 500 response
-      res.statusCode = 500;
+      res.statusCode = 500;   
       res.setHeader('Content-Type', 'text/plain');
       res.end('Internal Server Error');
     } else {
